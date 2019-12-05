@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+
 import './App.css';
+import axios from "axios"
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Home from "./components/Home"
+import QuotesList from "./components/QuotesList"
 
 function App() {
+  const [quotes, setQuotes] = useState([])
+
+  useEffect( _ => {
+    axios.get("https://quotes-db-harms.herokuapp.com/quotes")
+      .then(r => {
+        setQuotes(r.data)
+      })
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/quotes">Quotes</Link>
+        </nav>
+        <Route exact path="/" component={Home} />
+        <Route path="/quotes" render={() => <QuotesList quotes={quotes} /> } />
+      </div>
+    </Router>
   );
 }
 
