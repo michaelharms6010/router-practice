@@ -5,7 +5,7 @@ import axios from "axios"
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from "./components/Home"
 import QuotesList from "./components/QuotesList"
-
+import Quote from "./components/Quote"
 function App() {
   const [quotes, setQuotes] = useState([])
 
@@ -23,7 +23,8 @@ function App() {
           <Link to="/quotes">Quotes</Link>
         </nav>
         <Route exact path="/" component={Home} />
-        <Route path="/quotes" render={() => <QuotesList quotes={quotes} /> } />
+        <Route exact path="/quotes" render={() => <QuotesList quotes={quotes} /> } />
+        <Route path="/quotes/:id" render={props => <Quote quotes={quotes} match={props.match} /> } />
       </div>
     </Router>
   );
