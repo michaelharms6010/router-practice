@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom"; 
 
 function Home() {
     
@@ -6,7 +7,7 @@ function Home() {
   return (
     <>
         <h1>Welcome to Mike's Civ4 Quotes - Router Edition</h1>
-        <img className="mike-pic" src="https://i.imgur.com/OmDk276.jpg" />
+        <a href="https://zecmailer.com"><img className="mike-pic" src="https://i.imgur.com/OmDk276.jpg" /></a>
     </>
   );
 }

@@ -1,5 +1,9 @@
+html {
+  background: turquoise
+}
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -42,27 +46,44 @@
   border: 1px solid black;
   margin: 1% auto;
   border-radius:10px;
-  padding:10px;
+  padding:20px;
+  background:rebeccapurple;
+  color:white;
+  transition:.4s;
+  box-shadow:4px 4px 4px #888888;
+}
+
+.quote-card:hover {
+  transform:scale(1.03);
+  box-shadow:6px 6px 6px #888888;
 }
 
 .mike-pic {
-
+  border-radius:20px;
+  box-shadow: 5px 5px 5px #888888;
   width:60%;
+  transition:.4s;
+}
+
+.mike-pic:hover {
+  transform: scale(1.03);
 }
 
 nav {
-  background:black;
+  background:rebeccapurple;
   width:40%;
   padding:10px;
   display:flex;
   justify-content:space-around;
   margin: 0 auto;
+  border-radius:10px;
+
 }
 
 nav a {
   text-decoration:none;
-  color:white;
-  background:rebeccapurple;
+
+  background:white;
   padding:5px;
   border-radius:5px;
   font-weight:bold;
