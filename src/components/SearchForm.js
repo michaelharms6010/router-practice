@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 
 
 
-function SearchForm(props) {
-    let [search, setSearch] = useState("")
+function SearchForm({search, setSearch}) {
+    
 
     const handleChange = e => {
         setSearch(e.target.value)
-        console.log(search)
+
     }
 
     return (
