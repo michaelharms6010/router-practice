@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 
 
-function SearchForm({search, setSearch}) {
+function SearchForm({setSearch}) {
     
 
     const handleChange = e => {
@@ -15,8 +15,7 @@ function SearchForm({search, setSearch}) {
             <input
                 onChange={handleChange}
                 placeholder="search"
-                value={search}
-                name="name"
+                name="quote"
             />
 
 

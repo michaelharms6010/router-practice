@@ -8,7 +8,7 @@ function QuotesList({quotes}) {
 
   return (
     <>
-    <SearchForm search={search} setSearch={setSearch} />
+    <SearchForm setSearch={setSearch} />
       {quotes.filter(item => item.quote.includes(search))
         .map(quote => 
           <Link to={`/quotes/${quote.id}`}>
