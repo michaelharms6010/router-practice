@@ -13,13 +13,19 @@ function Quote(props) {
     // })
 
     return (
-        <Link to="/quotes">
-          <div className="big-quote-card">
-              <p style={{fontWeight: "bold"}}>{quote.quote}</p>
-              <p>{quote.speaker}</p>
-          </div>
-        </Link>
-      
+        <>
+        {quote ?  
+            
+            <Link to="/quotes">
+                <div className="big-quote-card">
+                    <p style={{fontWeight: "bold"}}>{quote.quote}</p>
+                    <p>{quote.speaker}</p>
+                </div>
+            </Link>
+        : <h1>Please return home and load the quotes database.</h1>}
+        
+         
+      </>
   );
 }
 
