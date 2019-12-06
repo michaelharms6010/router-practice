@@ -90,3 +90,25 @@ nav a {
   font-weight:bold;
   width:25%;
 }
+
+a {
+  text-decoration:none;
+}
+a:active {
+  color:white;
+}
+
+.big-quote-card {
+  width:80%;
+  height:60vh;
+  color:white;
+  background:rebeccapurple;
+  font-size:3rem;
+  padding:20px;
+  margin: 1% auto;
+  border-radius:20px;
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+
+}
