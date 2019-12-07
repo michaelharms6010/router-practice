@@ -12,6 +12,7 @@ function SearchForm({setSearch}) {
 
     return (
         <form>
+            <label><h4 className="search-label">Search Quotes</h4></label>
             <input
                 onChange={handleChange}
                 placeholder="search"
