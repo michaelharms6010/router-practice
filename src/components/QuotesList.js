@@ -9,7 +9,7 @@ function QuotesList({quotes}) {
   return (
     <div className="quotes-container">
     <SearchForm setSearch={setSearch} />
-      {quotes.filter(item => item.quote.includes(search))
+      {quotes.filter(item => item.quote.toLowerCase().includes(search.toLowerCase()))
         .map(quote => 
           <Link to={`/quotes/${quote.id}`}>
             <div className="quote-card">

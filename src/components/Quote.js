@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 import {Link} from "react-router-dom"
 // import axios from "axios";
 
-function Quote(props) {
+function Quote({quotes, match}) {
     let [quote, setQuote] = useState({})
 
-    useEffect(_ => setQuote(props.quotes.find(item => item.id === Number(props.match.params.id))),[])
+    useEffect(_ => setQuote(quotes.find(item => item.id === Number(match.params.id))),[])
 
     // useEffect(_ => {
     //     axios.get(`https://quotes-db-harms.herokuapp.com/quotes/${props.match.params.id}`)
