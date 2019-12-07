@@ -7,7 +7,7 @@ function QuotesList({quotes}) {
   let [search, setSearch] = useState("")
 
   return (
-    <>
+    <div className="quotes-container">
     <SearchForm setSearch={setSearch} />
       {quotes.filter(item => item.quote.includes(search))
         .map(quote => 
@@ -18,7 +18,7 @@ function QuotesList({quotes}) {
             </div>
           </Link>
       )}
-      </>
+      </div>
   );
 }
 
