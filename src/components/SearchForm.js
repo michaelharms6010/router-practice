@@ -7,7 +7,6 @@ function SearchForm({setSearch}) {
 
     const handleChange = e => {
         setSearch(e.target.value)
-
     }
 
     return (
@@ -15,11 +14,9 @@ function SearchForm({setSearch}) {
             <label><h4 className="search-label">Search Quotes</h4></label>
             <input
                 onChange={handleChange}
-                placeholder="search"
+                placeholder="Search"
                 name="quote"
             />
-
-
         </form>
   );
 }
